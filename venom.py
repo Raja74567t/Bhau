@@ -4,17 +4,17 @@ import logging
 from aiogram import Bot
 import asyncio
 
-API_TOKEN = '7255048090:AAH2_TjHO-6Kk8WVZiwPdbZMfSPUJhwrZNY'
-ADMIN_ID = '5588464519'
-MAX_RESTARTS = 5
-RESTART_PERIOD = 60  # Seconds
+API_TOKEN = '7841675622:AAFPf4Qj4j6Elii1GoPzXEhY9zdA2hK8NDE'
+ADMIN_ID = '7855020275'
+MAX_RESTARTS = 50000
+RESTART_PERIOD =  7200 # Seconds
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 bot = Bot(API_TOKEN)
 
 def start_bot():
     """Start the bot script as a subprocess."""
-    return subprocess.Popen(['python', 'm.py'])
+    return subprocess.Popen(['python', 'raja.py'])
 
 async def notify_admin(message):
     """Send a notification message to the admin via Telegram."""
@@ -42,12 +42,12 @@ async def main():
 
         logging.info("Starting the bot...")
         process = start_bot()
-        await notify_admin("🚀 Bot is starting...")
+        await notify_admin("🚀 UPGRADE KR RHA HU KHUDKO WAIT LODE...")
 
         while process.poll() is None:
             await asyncio.sleep(5)
         
-        logging.warning("Bot process terminated. Restarting in 10 seconds...")
+        logging.warning("Bot process terminated. Restarting in 7200 seconds...")
         await notify_admin("⚠️ The bot has crashed and will be restarted in 10 seconds.")
         restart_count += 1
         await asyncio.sleep(10)

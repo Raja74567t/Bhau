@@ -15,9 +15,9 @@ from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 loop = asyncio.get_event_loop()
 
 # Bot Configuration: Set with Authority
-TOKEN = '7841675622:AAHwFv4tOtjFGxCh-dfVzQdm-u3wX_6vPmc'
+TOKEN = '7841675622:AAFPf4Qj4j6Elii1GoPzXEhY9zdA2hK8NDE'
 ADMIN_USER_ID = 7855020275
-MONGO_URI = 'mongodb+srv://sharp:sharp@sharpx.x82gx.mongodb.net/?retryWrites=true&w=majority&appName=SharpX'
+MONGO_URI = 'mongodb+srv://harry:Sachdeva@cluster1.b02ct.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1'
 USERNAME = "@rajaraj_04"  # Immutable username for maximum security
 
 # Attack Status Variable to Control Single Execution
@@ -28,7 +28,7 @@ logging.basicConfig(format='%(asctime)s - ⚔️ %(message)s', level=logging.INF
 
 # MongoDB Connection - Operative Data Storage
 client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
-db = client['sharp']
+db = client['Harvinder']
 users_collection = db.users
 
 # Bot Initialization

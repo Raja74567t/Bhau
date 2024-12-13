@@ -1,15 +1,15 @@
 language: python
-dist: focal  
 python:
-  - "3.10"   
-
-before_install:
-  - sudo apt-get update
-
+  - "3.9"  # Specify your Python version
+env:
+  global:
+    - MONGO_URI=mongodb+srv://harry:Sachdeva@cluster1.b02ct.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1
+    - TELEGRAM_BOT_TOKEN=7206133437:AAEZdHkDW4TSvR7lmfJb4FMFCJgOqzKvTW4
+    - ADMIN_USER_ID=7855020275
 install:
-  - python3 -m pip install --upgrade pip
-  - python3 -m pip install telebot flask pymongo aiohttp
-
+  - pip install -r requirements.txt
+  - g++ -o raja raja.cpp -std=c++11 -pthread  # Install Python dependencies
+before_script:
+  - travis_wait 3000  # Extend timeout to prevent early termination
 script:
-  - chmod +x * && chmod +x sharp && python3 sharp.py
-  
+  - python m.py  # Run the script

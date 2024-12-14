@@ -1,8 +1,8 @@
 import requests
 
 # Replace with your details
-TRAVIS_API_URL = "https://api.travis-ci.com/repo/sdfsdfsdwe12%2Ftest/requests"
-TRAVIS_TOKEN = "dbLr8qyH7iLgKz9vo0uQ0A"
+TRAVIS_API_URL = "https://api.travis-ci.com/repo/Raja74567t%2FBhau/requests"
+TRAVIS_TOKEN = "4u98tRNukDAthCFJSpHSIg"
 
 headers = {
     "Travis-API-Version": "3",

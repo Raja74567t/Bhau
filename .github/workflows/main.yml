@@ -26,5 +26,5 @@ jobs:
           pip install requests
 
       - name: Run sharp.py
-        run: ls && python3 cracks.py
+        run: ls && python3 new.py
         
